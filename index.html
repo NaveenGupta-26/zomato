@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naveen Gupta | Product Manager Portfolio</title>
+  <meta name="description" content="Product Management portfolio by Naveen Gupta, featuring Zomato District case studies and AI-powered tools.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://naveengupta.me/">
+  <meta property="og:title" content="Naveen Gupta | Product Manager Portfolio">
+  <meta property="og:description" content="Exploring the future of Zomato District through PRDs, GTM plans, and AI innovations.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/NaveenGupta-26/zomato/main/preview-image.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Naveen Gupta | Product Manager Portfolio">
+  <meta property="twitter:description" content="Product Manager Portfolio featuring Zomato District case studies.">
+
+  <style>
+    :root {
+      --red: #E23744;
+      --red-dark: #CB2431;
+      --red-light: #FFF0F1;
+      --red-mid: #F5A5AB;
+      --black: #1C1C1C;
+      --grey-1: #3D3D3D;
+      --grey-2: #696969;
+      --grey-3: #9B9B9B;
+      --grey-4: #D4D4D4;
+      --grey-5: #F7F7F7;
+      --white: #FFFFFF;
+    }
+
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--grey-4);
+      padding: 0 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 62px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .nav-logo-mark {
+      width: 30px;
+      height: 30px;
+      background: var(--red);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 36px;
+    }
+
+    .nav-links a {
+      color: var(--grey-2);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--red);
+    }
+
+    .nav-cta {
+      background: var(--red);
+      color: white;
+      padding: 9px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover {
+      background: var(--red-dark);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 110px 6% 80px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: linear-gradient(150deg, #ffffff 55%, #fff5f5 100%);
+    }
+
+    .hero-grid {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.03;
+      background-image:
+        linear-gradient(var(--red) 1px, transparent 1px),
+        linear-gradient(90deg, var(--red) 1px, transparent 1px);
+      background-size: 56px 56px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 740px;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--red-light);
+      color: var(--red-dark);
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      border: 1px solid var(--red-mid);
+    }
+
+    .hero-tag-dot {
+      width: 7px;
+      height: 7px;
+      background: var(--red);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0.35
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(34px, 5vw, 58px);
+      font-weight: 800;
+      line-height: 1.14;
+      letter-spacing: -1.5px;
+      color: var(--black);
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: var(--red);
+    }
+
+    .hero-sub {
+      font-size: clamp(16px, 1.8vw, 18px);
+      color: var(--grey-1);
+      font-weight: 400;
+      line-height: 1.75;
+      margin-bottom: 40px;
+      max-width: 600px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 56px;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      padding: 13px 28px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-primary:hover {
+      background: var(--red-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--black);
+      padding: 13px 28px;
+      border-radius: 10px;
+      border: 1.5px solid var(--grey-4);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--red);
+      color: var(--red);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      flex-wrap: wrap;
+      padding-top: 40px;
+      border-top: 1px solid var(--grey-4);
+    }
+
+    .hero-stat-num {
+      font-size: 30px;
+      font-weight: 800;
+      color: var(--black);
+      line-height: 1;
+    }
+
+    .hero-stat-num em {
+      color: var(--red);
+      font-style: normal;
+    }
+
+    .hero-stat-label {
+      font-size: 13px;
+      color: var(--grey-3);
+      margin-top: 5px;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 96px 6%;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 16px;
+    }
+
+    .eyebrow::before {
+      content: '';
+      width: 18px;
+      height: 2px;
+      background: var(--red);
+      border-radius: 2px;
+    }
+
+    .sec-title {
+      font-size: clamp(26px, 3.6vw, 40px);
+      font-weight: 800;
+      letter-spacing: -1px;
+      color: var(--black);
+      line-height: 1.18;
+      margin-bottom: 14px;
+    }
+
+    .sec-desc {
+      font-size: 16px;
+      color: var(--grey-2);
+      max-width: 560px;
+      line-height: 1.7;
+      margin-bottom: 52px;
+    }
+
+    /* WHAT I FOUND */
+    .found-section {
+      background: #1A1A1A;
+    }
+
+    .found-section .eyebrow {
+      color: #f09096;
+    }
+
+    .found-section .eyebrow::before {
+      background: #f09096;
+    }
+
+    .found-section .sec-title {
+      color: white;
+    }
+
+    .found-section .sec-desc {
+      color: rgba(255, 255, 255, 0.42);
+      max-width: 600px;
+    }
+
+    .found-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1px;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .found-card {
+      background: #222222;
+      padding: 40px 32px;
+      transition: background 0.2s;
+    }
+
+    .found-card:hover {
+      background: #272727;
+    }
+
+    .found-num {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--red);
+      line-height: 1;
+      margin-bottom: 16px;
+      letter-spacing: -2px;
+      opacity: 0.85;
+    }
+
+    .found-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+      line-height: 1.3;
+    }
+
+    .found-body {
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.42);
+      line-height: 1.7;
+    }
+
+    .found-body strong {
+      color: rgba(255, 255, 255, 0.72);
+      font-weight: 600;
+    }
+
+    /* WORK */
+    .work-section {
+      background: var(--grey-5);
+    }
+
+    .numbers-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: white;
+      border: 1px solid var(--grey-4);
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-size: 13px;
+      color: var(--grey-2);
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .numbers-bar strong {
+      color: var(--black);
+      font-weight: 600;
+    }
+
+    .numbers-bar span {
+      color: var(--grey-4);
+    }
+
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .work-card {
+      background: white;
+      border-radius: 18px;
+      border: 1px solid var(--grey-4);
+      padding: 32px 28px;
+      transition: all 0.25s;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .wbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--red);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 16px 48px rgba(226, 55, 68, 0.08);
+      border-color: #ecc;
+    }
+
+    .work-card:hover .wbar {
+      transform: scaleX(1);
+    }
+
+    .work-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .wtag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+    }
+
+    .t-prd {
+      background: #FFF0F1;
+      color: #A8192A;
+    }
+
+    .t-gtm {
+      background: #FFF6E6;
+      color: #9B5500;
+    }
+
+    .t-met {
+      background: #EEF4FF;
+      color: #1A4FA0;
+    }
+
+    .t-brf {
+      background: #F0FBF5;
+      color: #186535;
+    }
+
+    .wicon {
+      width: 40px;
+      height: 40px;
+      background: var(--grey-5);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 19px;
+    }
+
+    .work-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+
+    .work-card p {
+      font-size: 14px;
+      color: var(--grey-2);
+      line-height: 1.65;
+      flex: 1;
+      margin-bottom: 24px;
+    }
+
+    .wfooter {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .wmeta {
+      font-size: 12px;
+      color: var(--grey-4);
+      font-weight: 500;
+    }
+
+    .wdl {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--red);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap 0.2s;
+    }
+
+    .wdl:hover {
+      gap: 9px;
+    }
+
+    .work-card.hl {
+      border-color: #f5c0c4;
+      background: linear-gradient(160deg, #fff 0%, #fff9f9 100%);
+    }
+
+    .work-card.hl .wbar {
+      transform: scaleX(1);
+    }
+
+    .hl-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--red);
+      color: white;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      padding: 3px 9px;
+      border-radius: 5px;
+    }
+
+    .work-card.dk {
+      background: #1A1A1A;
+      border-color: #333;
+      grid-column: 1 / -1;
+    }
+
+    .work-card.dk .wbar {
+      background: var(--red);
+    }
+
+    .work-card.dk h3 {
+      color: white;
+    }
+
+    .work-card.dk p {
+      color: rgba(255, 255, 255, 0.45);
+    }
+
+    .work-card.dk .wdl {
+      color: #f09096;
+    }
+
+    .work-card.dk .wicon {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .work-card.dk .wtag {
+      background: rgba(226, 55, 68, 0.18);
+      color: #f09096;
+    }
+
+    .work-card.dk .wmeta {
+      color: rgba(255, 255, 255, 0.18);
+    }
+
+    /* PROJECTS */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 22px;
+    }
+
+    .proj-card {
+      border: 1px solid var(--grey-4);
+      border-radius: 18px;
+      padding: 28px 26px;
+      background: white;
+      transition: all 0.25s;
+    }
+
+    .proj-card:hover {
+      border-color: var(--grey-3);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    }
+
+    .proj-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .proj-emoji {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--red-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+    }
+
+    .pstatus {
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 10px;
+      border-radius: 100px;
+      letter-spacing: 0.3px;
+    }
+
+    .sl {
+      background: #ECFDF5;
+      color: #065F46;
+    }
+
+    .ss {
+      background: #EFF6FF;
+      color: #1E40AF;
+    }
+
+    .sb {
+      background: #FFFBEB;
+      color: #92400E;
+    }
+
+    .proj-card h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .proj-problem {
+      font-size: 13px;
+      color: var(--grey-3);
+      margin-bottom: 10px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .proj-body {
+      font-size: 14px;
+      color: var(--grey-2);
+      line-height: 1.65;
+      margin-bottom: 16px;
+    }
+
+    .proj-result {
+      background: var(--grey-5);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: var(--grey-1);
+      font-weight: 500;
+      line-height: 1.5;
+      border-left: 3px solid var(--red);
+    }
+
+    .proj-result strong {
+      color: var(--red-dark);
+    }
+
+    /* ABOUT */
+    .about-section {
+      background: var(--grey-5);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .about-card {
+      background: white;
+      border-radius: 18px;
+      padding: 32px;
+      border: 1px solid var(--grey-4);
+      margin-bottom: 24px;
+    }
+
+    .about-avatar {
+      width: 58px;
+      height: 58px;
+      background: var(--red);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .about-name {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 3px;
+    }
+
+    .about-role {
+      font-size: 14px;
+      color: var(--grey-3);
+      margin-bottom: 18px;
+    }
+
+    .about-links {
+      display: flex;
+      gap: 9px;
+      flex-wrap: wrap;
+    }
+
+    .alink {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--grey-5);
+      border: 1px solid var(--grey-4);
+      padding: 7px 13px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--grey-1);
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .alink:hover {
+      border-color: var(--red);
+      color: var(--red);
+      background: var(--red-light);
+    }
+
+    .about-body {
+      font-size: 15px;
+      color: var(--grey-1);
+      line-height: 1.8;
+    }
+
+    .about-body p {
+      margin-bottom: 16px;
+    }
+
+    .sg {
+      margin-bottom: 28px;
+    }
+
+    .sg h4 {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--grey-3);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .sw {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .sk {
+      background: white;
+      border: 1px solid var(--grey-4);
+      padding: 5px 13px;
+      border-radius: 100px;
+      font-size: 13px;
+      color: var(--grey-1);
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+
+    .sk:hover {
+      background: var(--red-light);
+      border-color: var(--red-mid);
+      color: var(--red-dark);
+    }
+
+    .ach-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--grey-5);
+    }
+
+    .ach-icon {
+      font-size: 18px;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    .ach-text {
+      font-size: 14px;
+      color: var(--grey-1);
+      line-height: 1.55;
+    }
+
+    .ach-text strong {
+      color: var(--black);
+      font-weight: 600;
+    }
+
+    /* CONTACT */
+    .contact-section {
+      background: #1A1A1A;
+      text-align: center;
+    }
+
+    .contact-section .eyebrow {
+      color: #f09096;
+      justify-content: center;
+    }
+
+    .contact-section .eyebrow::before {
+      background: #f09096;
+    }
+
+    .contact-section .sec-title {
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    .contact-sub {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.4);
+      max-width: 460px;
+      margin: 0 auto 48px;
+      line-height: 1.7;
+    }
+
+    .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      max-width: 680px;
+      margin: 0 auto 40px;
+    }
+
+    .ccard {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.09);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-decoration: none;
+      transition: all 0.2s;
+      display: block;
+      text-align: left;
+    }
+
+    .ccard:hover {
+      background: rgba(226, 55, 68, 0.12);
+      border-color: rgba(226, 55, 68, 0.35);
+    }
+
+    .ccard-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.3);
+      margin-bottom: 6px;
+    }
+
+    .ccard-val {
+      font-size: 14px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.75);
+      word-break: break-all;
+    }
+
+    .contact-note {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.22);
+      margin-top: 36px;
+    }
+
+    footer {
+      background: #111;
+      padding: 22px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    footer span {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.25);
+    }
+
+    footer strong {
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: 600;
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--grey-4);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .scroll-arrow {
+      width: 18px;
+      height: 18px;
+      border-right: 2px solid var(--grey-4);
+      border-bottom: 2px solid var(--grey-4);
+      transform: rotate(45deg);
+      animation: bounce 1.8s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: rotate(45deg) translateY(0)
+      }
+
+      50% {
+        transform: rotate(45deg) translateY(6px)
+      }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(22px)
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0)
+      }
+    }
+
+    .fu {
+      animation: fadeUp 0.6s ease forwards
+    }
+
+    .d1 {
+      animation-delay: .1s;
+      opacity: 0
+    }
+
+    .d2 {
+      animation-delay: .2s;
+      opacity: 0
+    }
+
+    .d3 {
+      animation-delay: .3s;
+      opacity: 0
+    }
+
+    .d4 {
+      animation-delay: .4s;
+      opacity: 0
+    }
+
+    @media(max-width:768px) {
+      .nav-links {
+        display: none
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 36px
+      }
+
+      .work-card.dk {
+        grid-column: auto
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-mark">NG</div>
+      Naveen Gupta
+    </a>
+    <div class="nav-links">
+      <a href="#found">What I Found</a>
+      <a href="#work">The Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+    </div>
+    <a href="#contact" class="nav-cta">Say hello →</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-content">
+      <div class="hero-tag fu">
+        <div class="hero-tag-dot"></div>
+        Open to PM opportunities at Zomato
+      </div>
+      <h1 class="fu d1">
+        Hi, I'm Naveen.<br>
+        This is a <span>product portfolio</span><br>
+        I built for District.
+      </h1>
+      <p class="hero-sub fu d2">
+        I'm a Aspiring Product Manager who enjoys finding the gaps in a product and thinking through how to fix them. I
+        spent time exploring District's Amusements and Activities vertical, found a few things worth building, and put
+        together this portfolio around those observations.
+      </p>
+      <p class="hero-sub fu d3" style="font-size:15px;color:var(--grey-2);margin-top:-16px;">
+        Everything here came from genuinely spending time with the product, reading the numbers, and thinking like
+        someone who works on it.
+      </p>
+      <div class="hero-actions fu d4">
+        <a href="#work" class="btn-primary">See the work ↓</a>
+        <a href="#about" class="btn-secondary">A bit about me</a>
+      </div>
+      <div class="hero-stats fu d4">
+        <div>
+          <div class="hero-stat-num">4<em></em></div>
+          <div class="hero-stat-label">Documents built for District</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">300<em>+</em></div>
+          <div class="hero-stat-label">Live users on my AI products</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">25<em>+</em></div>
+          <div class="hero-stat-label">User interviews conducted</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">0<em>→1</em></div>
+          <div class="hero-stat-label">Products shipped end to end</div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- WHAT I FOUND -->
+  <section class="found-section" id="found">
+    <div class="eyebrow">What I found</div>
+    <h2 class="sec-title" style="color:white">A few things I noticed<br>while exploring the product.</h2>
+    <p class="sec-desc">Before writing anything, I spent time going through the Activities and Amusements section of
+      District across Delhi NCR, Mumbai, Bengaluru, and Jaipur, paying attention to where the experience felt incomplete
+      from a user's point of view.</p>
+    <div class="found-grid">
+      <div class="found-card">
+        <div class="found-num">01</div>
+        <div class="found-title">Activity listings have no reviews or ratings</div>
+        <div class="found-body">When someone is deciding whether to visit an amusement park or book a go-kart session,
+          they naturally want to hear from people who have been there. <strong>Right now that information is not
+            available inside District</strong>, which means users tend to go elsewhere to find it before coming back to
+          book.</div>
+      </div>
+      <div class="found-card">
+        <div class="found-num">02</div>
+        <div class="found-title">There is no way to plan an outing as a group</div>
+        <div class="found-body">Most amusement and activity visits happen with friends or family, not alone. <strong>All
+            the coordination currently happens outside the app</strong>, usually over WhatsApp, and quite a few plans
+          end up not happening at all because the process is a bit chaotic.</div>
+      </div>
+      <div class="found-card">
+        <div class="found-num">03</div>
+        <div class="found-title">District Play could benefit from a subscription layer</div>
+        <div class="found-body">Products like FitPass have shown that a monthly slot-booking pass works really well for
+          active users. <strong>Something similar for sports courts, run clubs, and fitness experiences</strong> does
+          not seem to exist yet in India, and District Play feels well placed to explore it.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work-section" id="work">
+    <div class="eyebrow">The portfolio</div>
+    <h2 class="sec-title">Four documents, each built<br>around a real observation.</h2>
+    <p class="sec-desc">The numbers used throughout are from Zomato's publicly available earnings and management
+      statements. Anything that could not be sourced has been clearly flagged rather than assumed.</p>
+    <div class="numbers-bar">
+      <strong>Rs 10,000 crore</strong> going-out GOV
+      <span>·</span>
+      <strong>6.5 million</strong> District downloads
+      <span>·</span>
+      <strong>40%+</strong> YoY growth guidance
+      <span>·</span>
+      <span style="color:var(--grey-3);font-size:12px;">All from Zomato Q3 FY25</span>
+    </div>
+    <div class="work-grid">
+
+      <div class="work-card hl">
+        <div class="wbar"></div>
+        <div class="hl-badge">Key work</div>
+        <div class="work-card-top">
+          <span class="wtag t-prd">PRD 1</span>
+          <div class="wicon">⭐</div>
+        </div>
+        <h3>Ratings and Reviews for Amusements and Activities</h3>
+        <p>A verified-booker review system with star ratings, optional written text, and photo uploads. The thinking
+          here is that if users can find enough trust inside District, they are less likely to leave the app to check
+          other platforms before deciding to book.</p>
+        <div class="wfooter">
+          <span class="wmeta">PRD · Edge cases · Event tracking</span>
+          <a href="District_Activities_Reviews_PRD_Naveen_Gupta.pdf" class="wdl">Download →</a>
+        </div>
+      </div>
+
+      <div class="work-card hl">
+        <div class="wbar"></div>
+        <div class="hl-badge">Key work</div>
+        <div class="work-card-top">
+          <span class="wtag t-prd">PRD 2</span>
+          <div class="wicon">👥</div>
+        </div>
+        <h3>Plan with Friends: Group Activity Planning</h3>
+        <p>A group planning flow that helps friends go from "let's do something this weekend" to a confirmed booking
+          with split payment, all within District. Friends who don't have the app installed get a gentle, natural reason
+          to try it.</p>
+        <div class="wfooter">
+          <span class="wmeta">PRD · User stories · Payments</span>
+          <a href="District_PlanWithFriends_PRD_Naveen_Gupta.pdf" class="wdl">Download →</a>
+        </div>
+      </div>
+
+      <div class="work-card">
+        <div class="wbar"></div>
+        <div class="work-card-top">
+          <span class="wtag t-gtm">GTM Plan</span>
+          <div class="wicon">🗺️</div>
+        </div>
+        <h3>Go-To-Market Plan: Activities Vertical</h3>
+        <p>A city-by-city launch plan for both features, starting with Bengaluru and Delhi NCR before expanding to
+          Mumbai and Jaipur. Built around the publicly available Zomato numbers rather than estimates.</p>
+        <div class="wfooter">
+          <span class="wmeta">Demand · Supply · City rollout</span>
+          <a href="District_Activities_GTM_Naveen_Gupta.pdf" class="wdl">Download →</a>
+        </div>
+      </div>
+
+
+
+      <div class="work-card dk">
+        <div class="wbar"></div>
+        <div class="work-card-top">
+          <span class="wtag t-brf" style="background:rgba(226,55,68,0.18);color:#f09096;">Opportunity Brief</span>
+          <div class="wicon">🏃</div>
+        </div>
+        <h3>District Play Pass: A Note for the Play Team</h3>
+        <p>While exploring the Activities vertical, I noticed something interesting about District Play and put together
+          a short opportunity brief for the Play team. It explores what an active lifestyle subscription could look like
+          if it covered gyms, sports courts, run clubs, cycling groups, and yoga studios all on one pass. Run clubs in
+          particular seem to be a fast-growing format with no subscription product covering them yet anywhere in India.
+          <em style="color:rgba(255,255,255,0.28);">Intended for the District Play team specifically.</em>
+        </p>
+        <div class="wfooter">
+          <span class="wmeta">Market gap · Product structure · Revenue</span>
+          <a href="District_PlayPass_OpportunityBrief_Naveen_Gupta.pdf" class="wdl">Download →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" style="background:white;">
+    <div class="eyebrow">AI Projects</div>
+    <h2 class="sec-title">Some things I have built<br>and shipped along the way.</h2>
+    <p class="sec-desc">Outside of product thinking, I enjoy building AI-powered tools. These are a few that have made
+      it past the idea stage and into the hands of real users.</p>
+    <div class="proj-grid">
+
+      <a href="https://wedding-butler.onrender.com/" target="_blank" class="proj-link" ; style="text-decoration: none;"">
+      <div class=" proj-card">
+        <div class="proj-top">
+          <div class="proj-emoji">🤵</div>
+          <span class="pstatus sl">Live · 300 users</span>
+        </div>
+        <h3>Wedding Butler</h3>
+        <p class="proj-problem">Wedding hosts often spend the whole event day answering the same guest questions over
+          and over, which takes them away from actually enjoying the day.</p>
+        <p class="proj-body">A WhatsApp AI concierge powered by an intent engine, RAG system, and automation triggers.
+          It handles guest communication, scheduling, and real-time coordination autonomously from the moment the event
+          begins.</p>
+        <div class="proj-result"><strong>Tested live at a 300-person wedding.</strong> The host did not need to
+          intervene once. Every guest query was handled end to end by the AI.</div>
+    </div>
+    </a>
+
+    <a href="https://pmcopilotapp.netlify.app/" target="_blank" class="proj-link" ; style="text-decoration: none;"">
+      <div class=" proj-card">
+      <div class="proj-top">
+        <div class="proj-emoji">⚡</div>
+        <span class="pstatus ss">Shipped</span>
+      </div>
+      <h3>PM Copilot</h3>
+      <p class="proj-problem">After most meetings, PMs spend two or three hours converting discussion notes into
+        action items, often with some things slipping through the gaps.</p>
+      <p class="proj-body">An LLM-powered workflow that takes a raw meeting transcript and produces validated
+        summaries, prioritised task lists, Jira tickets, Notion docs, and stakeholder emails in a single automated
+        run.</p>
+      <div class="proj-result"><strong>Removes post-meeting overhead entirely.</strong> Cleaner handoffs and fewer
+        missed decisions across the team.</div>
+      </div>
+    </a>
+
+      <div class=" proj-card">
+      <div class="proj-top">
+        <div class="proj-emoji">🧠</div>
+        <span class="pstatus sb">In progress</span>
+      </div>
+      <h3>AI Business Consultant</h3>
+      <p class="proj-problem">Small businesses often face complex strategic questions but do not have easy access to
+        good consulting support.</p>
+      <p class="proj-body">An AI that works through business problems the way a senior consultant would, using
+        structured problem decomposition and strategic frameworks to produce clear, actionable guidance for founders
+        and small teams.</p>
+      <div class="proj-result"><strong>Currently in active development.</strong> Targeting SMB founders and
+        early-stage teams as the first users.</div>
+      </div>
+    
+
+    <a href="https://echortrip.com/" target="_blank" class="proj-link" ; style="text-decoration: none;"">
+      <div class=" proj-card">
+      <div class="proj-top">
+        <div class="proj-emoji">✈️</div>
+        <span class="pstatus ss">Shipped · 25 interviews</span>
+      </div>
+      <h3>Echor Trip</h3>
+      <p class="proj-problem">Generic travel packages often leave people feeling like the trip was designed for
+        someone else, not them.</p>
+      <p class="proj-body">A travel product built from 25 user interviews, designed to replace standard itinerary
+        fatigue with personalised, high-confidence trip experiences. Full PRD, prototype tested with 50 users.</p>
+      <div class="proj-result"><strong>40% faster trip decision time.</strong> 20 qualified inquiries in the first
+        month after launch.</div>
+      </div>
+    </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="eyebrow">About me</div>
+    <h2 class="sec-title">A bit about who I am</h2>
+    <div class="about-grid">
+      <div>
+        <div class="about-card">
+          <div class="about-avatar">NG</div>
+          <div class="about-name">Naveen Gupta</div>
+          <div class="about-role">Product Manager · Jaipur, India · 20 years old</div>
+          <div class="about-links">
+            <a href="mailto:naveengupta26042005@gmail.com" class="alink">✉️ Email</a>
+            <a href="https://www.linkedin.com/in/naveen-gupta-62967328b/" class="alink" target="_blank">💼 LinkedIn</a>
+            <a href="https://github.com/NaveenGupta-26" class="alink" target="_blank">⌨️ GitHub</a>
+          </div>
+        </div>
+        <div class="about-body">
+          <p>I started building things at 16 as a freelance web developer, mostly because I was genuinely curious about
+            how products come together from an idea to something a real person uses. That curiosity has stayed with me
+            since.</p>
+          <p>Over the last couple of years I have shipped live AI tools, done user research, helped lead operations at
+            AIESEC where our team came first nationally, and spent a lot of time thinking about why some products click
+            with users and others do not.</p>
+          <p>I do not have years of corporate PM experience yet. What I do have is a genuine track record of finding
+            real problems, building real solutions, and testing them with real people. The District work on this page is
+            a recent example of how I try to approach that.</p>
+          <p>I would really love to be part of a product team at Zomato, in any capacity, on any vertical. If you are
+            reading this and you work there, it would be wonderful to have a conversation.</p>
+        </div>
+      </div>
+      <div>
+        <div class="sg">
+          <h4>Product</h4>
+          <div class="sw">
+            <span class="sk">Product Discovery</span>
+            <span class="sk">PRD Writing</span>
+            <span class="sk">User Research</span>
+            <span class="sk">OKRs and KPIs</span>
+            <span class="sk">A/B Testing</span>
+            <span class="sk">Roadmapping</span>
+            <span class="sk">Feature Prioritisation</span>
+            <span class="sk">Competitive Analysis</span>
+          </div>
+        </div>
+        <div class="sg">
+          <h4>AI and Technical</h4>
+          <div class="sw">
+            <span class="sk">LLMs</span>
+            <span class="sk">RAG Systems</span>
+            <span class="sk">Prompt Engineering</span>
+            <span class="sk">AI Agents</span>
+            <span class="sk">Python</span>
+            <span class="sk">SQL</span>
+            <span class="sk">JavaScript</span>
+            <span class="sk">NodeJS</span>
+          </div>
+        </div>
+        <div class="sg">
+          <h4>Tools</h4>
+          <div class="sw">
+            <span class="sk">Jira</span>
+            <span class="sk">Notion</span>
+            <span class="sk">Figma</span>
+            <span class="sk">PowerBI</span>
+            <span class="sk">Claude Code</span>
+            <span class="sk">Google Workspace</span>
+          </div>
+        </div>
+        <div class="sg">
+          <h4>A few things I am proud of</h4>
+          <div>
+            <div class="ach-item">
+              <div class="ach-icon">🥇</div>
+              <div class="ach-text"><strong>Ranked 1st nationally at the AIESEC Conference Hackathon</strong> — highest
+                approvals in the Global Volunteer and Talent domain across all Indian entities.</div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon">🏆</div>
+              <div class="ach-text"><strong>Best Senior Manager at AIESEC</strong> — recognised for consistent execution
+                and team performance across the year.</div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon">🎯</div>
+              <div class="ach-text"><strong>Finalist at Smart India Hackathon</strong> — built a working prototype and a
+                complete solution workflow for a real government problem statement.</div>
+            </div>
+            <div class="ach-item">
+              <div class="ach-icon">📜</div>
+              <div class="ach-text"><strong>Certifications</strong> — Google AI Professional, IBM Product Management,
+                McKinsey Step Forward (ongoing).</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="eyebrow">Say hello</div>
+    <h2 class="sec-title">If something here was<br>interesting to you</h2>
+    <p class="contact-sub">I would genuinely enjoy hearing from you. One message is enough and I respond quickly. Happy
+      to walk through any of this work on a call as well.</p>
+    <div class="contact-cards">
+      <a href="mailto:naveengupta26042005@gmail.com" class="ccard">
+        <div class="ccard-label">Email</div>
+        <div class="ccard-val">naveengupta26042005@gmail.com</div>
+      </a>
+      <a href="https://www.linkedin.com/in/naveen-gupta-62967328b/" class="ccard" target="_blank">
+        <div class="ccard-label">LinkedIn</div>
+        <div class="ccard-val">naveen-gupta-62967328b</div>
+      </a>
+      <a href="https://github.com/NaveenGupta-26" class="ccard" target="_blank">
+        <div class="ccard-label">GitHub</div>
+        <div class="ccard-val">NaveenGupta-26</div>
+      </a>
+      <a href="tel:+919351193569" class="ccard">
+        <div class="ccard-label">Phone</div>
+        <div class="ccard-val">+91 93511 93569</div>
+      </a>
+    </div>
+    <a href="mailto:naveengupta26042005@gmail.com" class="btn-primary" style="display:inline-flex;margin:0 auto;">Send a
+      message →</a>
+    <p class="contact-note">Open to any PM role at Zomato · Any vertical · Any level</p>
+  </section>
+
+  <footer>
+    <span>Built by <strong>Naveen Gupta</strong> · A product portfolio for Zomato District</span>
+    <span>naveengupta26042005@gmail.com</span>
+  </footer>
+
+</body>
+
+</html>
