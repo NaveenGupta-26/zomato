@@ -1185,6 +1185,7 @@
       <div class="mobile-nav-actions">
         <a href="./prototype/dist/index.html" target="_blank" class="nav-cta" style="background: var(--black); text-align: center;" onclick="closeMobileMenu()">Live Prototype 📱</a>
         <a href="#contact" class="nav-cta" style="text-align: center;" onclick="closeMobileMenu()">Say hello →</a>
+        <button style="background: transparent; border: 1.5px solid var(--grey-4); color: var(--black); padding: 9px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;" onclick="closeMobileMenu()" onmouseover="this.style.borderColor='var(--red)'; this.style.color='var(--red)';" onmouseout="this.style.borderColor='var(--grey-4)'; this.style.color='var(--black)';">✕ Close Menu</button>
       </div>
     </div>
   </div>
@@ -1607,6 +1608,13 @@
         hamburger.classList.toggle('active');
         overlay.classList.toggle('active');
         document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+      });
+
+      // Close menu when clicking outside the menu container (on the overlay background)
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+          closeMobileMenu();
+        }
       });
     }
 
