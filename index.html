@@ -1058,8 +1058,12 @@
       <a href="#work">The Work</a>
       <a href="#projects">Projects</a>
       <a href="#about">About</a>
+      <a href="Naveen_Gupta_PM_CV_Zomato.pdf" target="_blank">CV</a>
     </div>
-    <a href="#contact" class="nav-cta">Say hello →</a>
+    <div style="display: flex; gap: 12px; align-items: center;">
+      <a href="./prototype/dist/index.html" target="_blank" class="nav-cta" style="background: var(--black);">Live Prototype 📱</a>
+      <a href="#contact" class="nav-cta">Say hello →</a>
+    </div>
   </nav>
 
   <!-- HERO -->
@@ -1086,7 +1090,8 @@
         someone who works on it.
       </p>
       <div class="hero-actions fu d4">
-        <a href="#work" class="btn-primary">See the work ↓</a>
+        <a href="./prototype/dist/index.html" target="_blank" class="btn-primary" style="background:var(--red); box-shadow: 0 4px 20px rgba(226, 55, 68, 0.35);">Try Live Prototype 📱</a>
+        <a href="#work" class="btn-secondary">See the work ↓</a>
         <a href="#about" class="btn-secondary">A bit about me</a>
       </div>
       <div class="hero-stats fu d4">
@@ -1162,6 +1167,24 @@
       <span>·</span>
       <span style="color:var(--grey-3);font-size:12px;">All from Zomato Q3 FY25</span>
     </div>
+
+    <!-- PROTOTYPE HIGHLIGHT BANNER -->
+    <div class="work-card dk" style="margin-bottom: 28px; background: linear-gradient(135deg, #1A1A1A 0%, #2D1416 100%); border: 1px solid rgba(226, 55, 68, 0.25); display: flex; flex-direction: row; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between; padding: 36px; grid-column: 1 / -1;">
+      <div style="flex: 1; min-width: 280px;">
+        <span class="wtag t-prd" style="background: rgba(226, 55, 68, 0.2); color: #f09096; font-size: 11px; margin-bottom: 12px; display: inline-block;">Interactive Mobile Prototype 📱</span>
+        <h3 style="font-size: 22px; font-weight: 800; color: white; margin-bottom: 8px;">Zomato District - Plan with Friends & Activities</h3>
+        <p style="color: rgba(255, 255, 255, 0.7); font-size: 14px; line-height: 1.6; margin-bottom: 0;">
+          I built a **fully interactive, high-fidelity mobile prototype** in React to showcase exactly how the **Plan with Friends** group booking flow, shared payments, and the **Ratings & Reviews** flow would work live within the District app.
+        </p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px; align-items: flex-start; justify-content: center;">
+        <a href="./prototype/dist/index.html" target="_blank" class="btn-primary" style="background: var(--red); color: white; text-decoration: none; padding: 14px 28px; border-radius: 10px; font-weight: 700; box-shadow: 0 8px 24px rgba(226, 55, 68, 0.4); transition: transform 0.2s; display: inline-flex; align-items: center; gap: 8px;">
+          Launch Interactive Prototype 🚀
+        </a>
+        <span style="font-size: 12px; color: rgba(255, 255, 255, 0.4); text-align: center; width: 100%;">React · Tailwind · Framer Motion</span>
+      </div>
+    </div>
+
     <div class="work-grid">
 
       <div class="work-card hl">
@@ -1175,9 +1198,12 @@
         <p>A verified-booker review system with star ratings, optional written text, and photo uploads. The thinking
           here is that if users can find enough trust inside District, they are less likely to leave the app to check
           other platforms before deciding to book.</p>
-        <div class="wfooter">
+        <div class="wfooter" style="gap: 12px; flex-wrap: wrap;">
           <span class="wmeta">PRD · Edge cases · Event tracking</span>
-          <a href="District_Activities_Reviews_PRD_Naveen_Gupta.pdf" class="wdl">Download →</a>
+          <div style="display: flex; gap: 14px; align-items: center;">
+            <a href="./prototype/dist/index.html#/review/booking-123" target="_blank" class="wdl" style="color: var(--black); font-weight: 700;">Try Prototype 📱</a>
+            <a href="District_Activities_Reviews_PRD_Naveen_Gupta.pdf" class="wdl">Download PRD →</a>
+          </div>
         </div>
       </div>
 
@@ -1192,9 +1218,12 @@
         <p>A group planning flow that helps friends go from "let's do something this weekend" to a confirmed booking
           with split payment, all within District. Friends who don't have the app installed get a gentle, natural reason
           to try it.</p>
-        <div class="wfooter">
+        <div class="wfooter" style="gap: 12px; flex-wrap: wrap;">
           <span class="wmeta">PRD · User stories · Payments</span>
-          <a href="District_PlanWithFriends_PRD_Naveen_Gupta.pdf" class="wdl">Download →</a>
+          <div style="display: flex; gap: 14px; align-items: center;">
+            <a href="./prototype/dist/index.html#/plan/create/act-1" target="_blank" class="wdl" style="color: var(--black); font-weight: 700;">Try Prototype 📱</a>
+            <a href="District_PlanWithFriends_PRD_Naveen_Gupta.pdf" class="wdl">Download PRD →</a>
+          </div>
         </div>
       </div>
 
@@ -1324,9 +1353,11 @@
           <div class="about-name">Naveen Gupta</div>
           <div class="about-role">Product Manager · Jaipur, India · 20 years old</div>
           <div class="about-links">
+            <a href="./prototype/dist/index.html" target="_blank" class="alink" style="border-color:var(--red); color:var(--red); background:var(--red-light); font-weight:700;">📱 Live Prototype</a>
             <a href="mailto:naveengupta26042005@gmail.com" class="alink">✉️ Email</a>
             <a href="https://www.linkedin.com/in/naveen-gupta-62967328b/" class="alink" target="_blank">💼 LinkedIn</a>
             <a href="https://github.com/NaveenGupta-26" class="alink" target="_blank">⌨️ GitHub</a>
+            <a href="Naveen_Gupta_PM_CV_Zomato.pdf" target="_blank" class="alink">📄 Download CV</a>
           </div>
         </div>
         <div class="about-body">
@@ -1386,22 +1417,22 @@
           <div>
             <div class="ach-item">
               <div class="ach-icon">🥇</div>
-              <div class="ach-text"><strong>Ranked 1st nationally at the AIESEC Conference Hackathon</strong> — highest
+              <div class="ach-text"><strong>Ranked 1st nationally at the AIESEC Conference Hackathon</strong>: highest
                 approvals in the Global Volunteer and Talent domain across all Indian entities.</div>
             </div>
             <div class="ach-item">
               <div class="ach-icon">🏆</div>
-              <div class="ach-text"><strong>Best Senior Manager at AIESEC</strong> — recognised for consistent execution
+              <div class="ach-text"><strong>Best Senior Manager at AIESEC</strong>: recognised for consistent execution
                 and team performance across the year.</div>
             </div>
             <div class="ach-item">
               <div class="ach-icon">🎯</div>
-              <div class="ach-text"><strong>Finalist at Smart India Hackathon</strong> — built a working prototype and a
+              <div class="ach-text"><strong>Finalist at Smart India Hackathon</strong>: built a working prototype and a
                 complete solution workflow for a real government problem statement.</div>
             </div>
             <div class="ach-item">
               <div class="ach-icon">📜</div>
-              <div class="ach-text"><strong>Certifications</strong> — Google AI Professional, IBM Product Management,
+              <div class="ach-text"><strong>Certifications</strong>: Google AI Professional, IBM Product Management,
                 McKinsey Step Forward (ongoing).</div>
             </div>
           </div>
